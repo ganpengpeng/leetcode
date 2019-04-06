@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="91a7a9c6-10a2-4df1-a27e-48c6c8ea62ec" name="Default Changelist" comment="" />
+=======
     <list default="true" id="91a7a9c6-10a2-4df1-a27e-48c6c8ea62ec" name="Default Changelist" comment="">
 <<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/Solutin91.java" afterDir="false" />
@@ -41,6 +44,7 @@
 >>>>>>> db5e2ae789b7e23250178e876459bb039679f4d6
       <change beforePath="$PROJECT_DIR$/target/classes/Solution10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Solution10.class" afterDir="false" />
     </list>
+>>>>>>> b74b303d3319af48799def90a078984994338061
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,6 +58,9 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
 <<<<<<< HEAD
+          <entry key="project.closed" value="4" />
+=======
+<<<<<<< HEAD
           <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.5" value="4" />
@@ -63,6 +70,7 @@
           <entry key="project.opened" value="10" />
 =======
           <entry key="project.closed" value="3" />
+>>>>>>> b74b303d3319af48799def90a078984994338061
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.5" value="2" />
@@ -257,11 +265,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Solution221.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
-              <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+              <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
               <folding>
                 <element signature="e#73#74#0" expanded="true" />
                 <element signature="e#120#121#0" expanded="true" />
@@ -270,7 +278,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Solution84.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="164">
@@ -344,9 +352,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1383" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1384" />
     <option name="height" value="755" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -442,9 +450,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
 <<<<<<< HEAD
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554025133040" />
+=======
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553406138420" />
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554014478455" />
+>>>>>>> b74b303d3319af48799def90a078984994338061
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
 >>>>>>> db5e2ae789b7e23250178e876459bb039679f4d6
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -567,17 +579,25 @@
       <workItem from="1553065969422" duration="24631000" />
 =======
       <workItem from="1550754931721" duration="3735000" />
+<<<<<<< HEAD
+      <workItem from="1553926495824" duration="13238000" />
+=======
       <workItem from="1553926495824" duration="13171000" />
 >>>>>>> db5e2ae789b7e23250178e876459bb039679f4d6
+>>>>>>> b74b303d3319af48799def90a078984994338061
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+    <option name="totallyTimeSpent" value="23528000" />
+=======
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="67883000" />
 =======
     <option name="totallyTimeSpent" value="23461000" />
 >>>>>>> db5e2ae789b7e23250178e876459bb039679f4d6
+>>>>>>> b74b303d3319af48799def90a078984994338061
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -606,10 +626,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
 <<<<<<< HEAD
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3282123" />
+=======
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.32939914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3444206" />
 =======
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3282123" />
+>>>>>>> b74b303d3319af48799def90a078984994338061
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3980447" />
 >>>>>>> db5e2ae789b7e23250178e876459bb039679f4d6
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -989,10 +1013,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Solution84.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Solution221.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
           <folding>
             <element signature="e#73#74#0" expanded="true" />
             <element signature="e#120#121#0" expanded="true" />
@@ -1012,6 +1043,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1035,6 +1068,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> b74b303d3319af48799def90a078984994338061
   </component>
   <component name="masterDetails">
     <states>
