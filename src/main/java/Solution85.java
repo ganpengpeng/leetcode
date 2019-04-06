@@ -1,32 +1,47 @@
+import java.util.Arrays;
+
 public class Solution85 {
     public int maximalRectangle(char[][] matrix) {
-        int width = matrix.length;
-        int longth = matrix[0].length;
-        int[][] dp = new int[width][longth];
-        if (matrix[0][0] == '0')
-            dp[0][0] = 0;
-        else
-            dp[0][0] = 1;
-        for (int i = 1; i < longth; i++) {
-            if (matrix[0][i] == '1')
-                dp[0][i] = dp[0][i - 1] + 1;
-            else
-                dp[0][i] = 0;
-        }
-        for (int i = 1; i < width; i++) {
-            if (matrix[i][0] == '1')
-                dp[i][0] = dp[i-1][0] + 1;
-            else
-                dp[i][0] = 0;
-        }
-        for (int i = 1; i < width; i++) {
-            for (int j = 1; j < longth; j++) {
-                if (matrix[i][j] == '1')
-                    dp[i][j] = dp[i-1][j - 1] + 1;
-                else
-                    dp[0][i] = 0;
+        if (matrix.length == 0)
+            return 0;
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int[] height = new int[m];
+        int[] left = new int[m];
+        int[] right = new int[m];
+        int result = 0;
+        Arrays.fill(right, m);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] == '1') {
+                    height[j] = height[j] + 1;
+                } else {
+                    height[j] = 0;
+                }
+            }
+            int curLeft = 0;
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] == '1') {
+                    left[j] = Math.max(left[j], curLeft);
+                } else {
+                    curLeft = j + 1;
+                    left[j] = 0;
+                }
+            }
+            int curRight = m;
+            for (int j = m - 1; j >= 0; j--) {
+                if (matrix[i][j] == '1') {
+                    right[j] = Math.min(right[j], curRight);
+                } else {
+                    curRight = j;
+                    right[j] = m;
+                }
+            }
+            for (int j = 0; j < m; j++) {
+                int area = height[j] * (right[j] - left[j]);
+                result = result < area ? area : result;
             }
         }
-        return 0;
+        return result;
     }
 }
