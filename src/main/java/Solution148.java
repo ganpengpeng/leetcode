@@ -3,6 +3,9 @@ public class Solution148 {
         if (head == null || head.next == null) {
             return head;
         }
+        // TODO trick
+        // we should think about divide and conquer
+        // when question request a O(nlogn) time complexity
         ListNode fir = null, sec = head, thr = head;
         if (head.next.next == null){
             if (head.val <= head.next.val){
