@@ -5,31 +5,28 @@ public class Solution28 {
     }
 
     public int strStr(String haystack, String needle) {
-        if (needle.length() == 0)
-            return 0;
-        int[] next = getNext(needle);
         int i = 0, j = 0;
-        for (; i < haystack.length() && j < needle.length(); ) {
-            if (j == -1 || haystack.charAt(i) == needle.charAt(j)) {
+        if(needle.length() == 0) return 0;
+        if(haystack.length() < needle.length()) return -1;
+        int[] next = getNext(needle);
+        for(; i < haystack.length();){
+            if(j == -1 || haystack.charAt(i) == needle.charAt(j)){
                 i += 1;
                 j += 1;
             } else {
                 j = next[j];
             }
-        }
-        if (j == needle.length()) {
-            return i - needle.length();
+            if(j == needle.length()) return i - needle.length();
         }
         return -1;
     }
 
-    public int[] getNext(String p) {
-        int[] next = new int[p.length()];
-        int k = -1, j = 0;
-
+    private int[] getNext(String s){
+        int[] next = new int[s.length()];
         next[0] = -1;
-        while (j < p.length() - 1) {
-            if (k == -1 || p.charAt(j) == p.charAt(k)) {
+        int k = -1;
+        for(int j = 0; j < s.length() - 1;){
+            if(k == -1 || s.charAt(j) == s.charAt(k)){
                 next[++j] = ++k;
             } else {
                 k = next[k];

@@ -1,15 +1,16 @@
 import java.util.Stack;
+import java.util.ArrayDeque;
 
 public class MinStack {
-    Stack<Integer> s1, s2;
+    ArrayDeque<Integer> s1, s2;
     int min;
 
     /**
      * initialize your data structure here.
      */
     public MinStack() {
-        s1 = new Stack<Integer>();
-        s2 = new Stack<Integer>();
+        s1 = new ArrayDeque<>();
+        s2 = new ArrayDeque<>();
         min = Integer.MAX_VALUE;
     }
 
@@ -22,14 +23,14 @@ public class MinStack {
     public void pop() {
         s1.pop();
         s2.pop();
-        if (!s2.empty())
-            min = s2.peek();
+        if (!s2.isEmpty())
+            min = s2.element();
         else
             min = Integer.MAX_VALUE;
     }
 
     public int top() {
-        return s1.peek();
+        return s1.element();
     }
 
     public int getMin() {
