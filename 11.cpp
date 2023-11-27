@@ -25,6 +25,6 @@ public:
 int main() {
     Solution s;
     vector<int> v = {1, 1};
-    v.front()
+    v.front();
     s.maxArea(v);
 }
