@@ -1,6 +1,7 @@
 .idea
 target
 cmake-build-debug
+out
 output
 .vscode
 build
