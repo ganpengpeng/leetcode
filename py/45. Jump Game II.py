@@ -44,6 +44,7 @@ class Solution:
                 i += 1
             current_max = next_max
 
+
 solution = Solution()
 nums = [x for x in range(25000, 0, -1)]
 nums += [1, 0]

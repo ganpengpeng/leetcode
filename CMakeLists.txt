@@ -1,6 +1,6 @@
-# cmake_minimum_required(VERSION <specify CMake version here>)
 cmake_minimum_required(VERSION 3.20)
 project(leetcode)
+
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(CMAKE_CURRENT_SOURCE_DIR)
@@ -14,4 +14,8 @@ add_executable(14 14.cpp)
 add_executable(15 15.cpp)
 add_executable(72 72.cpp)
 add_executable(5 5.cpp)
+add_executable(7 7.cpp)
+add_executable(87 87.cpp)
+add_executable(813 813.cpp)
+add_executable(746 746.cpp)
 add_executable(576 576.cpp)

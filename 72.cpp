@@ -3,7 +3,7 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   int minDistance(string word1, string word2) {
     vector<vector<int>> v;
     for (int i = 0; i < word1.size() + 1; ++i) {

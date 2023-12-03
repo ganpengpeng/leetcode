@@ -3,7 +3,7 @@
 using namespace std;
 
 class Solution {
- public:
+public:
   string longestPalindrome(string s) {
     string t = "#";
     for (char i : s) {
@@ -42,8 +42,9 @@ class Solution {
     }
     return rst;
   }
+
   // 返回臂长
-  static int expand(const string &s, int l, int r) {
+  static int expand(const string& s, int l, int r) {
     while (l >= 0 && r < s.size() && s[l] == s[r]) {
       l -= 1;
       r += 1;
