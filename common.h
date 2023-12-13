@@ -1,14 +1,13 @@
-#ifndef LEETCODE_COMMON_H
-#define LEETCODE_COMMON_H
+#pragma once
 
-#include <string>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <set>
 #include <algorithm>
+#include <climits>
 #include <functional>
 #include <iostream>
-#include <climits>
-
-#endif //LEETCODE_COMMON_H
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <string>
+#include <unordered_map>
+#include <vector>
