@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
  public:
   vector<vector<pair<int, int>>> dp;
   string s1, s2, s3;
@@ -61,6 +61,30 @@ class Solution {
     }
 
     return rst;
+  }
+};*/
+
+class Solution {
+ public:
+  vector<bool> dp;
+
+  bool isInterleave(string s1, string s2, string s3) {
+    if (s1.size() + s2.size() != s3.size())
+      return false;
+
+    dp.resize(s2.size() + 1);
+    dp[0] = true;
+    for (int i = 1; i <= s2.size(); ++i) {
+      dp[i] = dp[i - 1] && s2[i - 1] == s3[i - 1];
+    }
+
+    for (int i = 1; i <= s1.size(); ++i) {
+      dp[0] = dp[0] && s1[i - 1] == s3[i - 1];
+      for (int j = 1; j <= s2.size(); ++j) {
+        dp[j] = (dp[j] && s1[i - 1] == s3[i + j - 1]) || (dp[j - 1] && s2[j - 1] == s3[i + j - 1]);
+      }
+    }
+    return dp[s2.size()];
   }
 };
 
