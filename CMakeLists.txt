@@ -5,6 +5,9 @@ set(CMAKE_CXX_STANDARD 20)
 
 include_directories(CMAKE_CURRENT_SOURCE_DIR)
 
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g -fsanitize=address")
+#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address")
+
 add_executable(3 3.cpp)
 add_executable(11 11.cpp)
 add_executable(56 56.cpp)
@@ -49,3 +52,7 @@ add_executable(42 42.cpp)
 add_executable(84 84.cpp)
 add_executable(2859 2859.cpp)
 add_executable(239 239.cpp)
+add_executable(802 802.cpp)
+add_executable(1267 1267.cpp)
+add_executable(2948 2948.cpp)
+add_executable(1765 1765.cpp)
