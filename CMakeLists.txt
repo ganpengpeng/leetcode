@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(TestProject)
+project(leetcode)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -54,3 +54,5 @@ add_executable(802 802.cpp)
 add_executable(1267 1267.cpp)
 add_executable(2948 2948.cpp)
 add_executable(1765 1765.cpp)
+add_executable(2017 2017.cpp)
+add_executable(2661 2661.cpp)
