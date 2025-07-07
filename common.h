@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <climits>
+#include <cstdint>
 #include <functional>
 #include <iostream>
 #include <map>
@@ -12,7 +13,9 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include <cstdint>
+#include <cmath>
+
+using namespace std;
 
 struct TreeNode {
   int val;
