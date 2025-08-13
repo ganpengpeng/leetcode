@@ -17,6 +17,8 @@
 
 using namespace std;
 
+long long mod = 1e9 + 7;
+
 struct TreeNode {
   int val;
   TreeNode* left;
