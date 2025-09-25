@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <climits>
+#include <cmath>
 #include <cstdint>
 #include <functional>
 #include <iostream>
@@ -13,7 +14,6 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include <cmath>
 
 using namespace std;
 
@@ -26,6 +26,14 @@ struct TreeNode {
   TreeNode() : val(0), left(nullptr), right(nullptr) {}
   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
   TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+};
+
+struct ListNode {
+  int val;
+  ListNode* next;
+  ListNode() : val(0), next(nullptr) {}
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 void PrintVector(const std::vector<int>& v) {
@@ -48,4 +56,12 @@ void Print2DVector(const std::vector<std::vector<int>>& v) {
     PrintVector(i);
     std::cout << std::endl;
   }
+}
+
+void PrintList(ListNode* head) {
+  while (head) {
+    cout << head->val << ",";
+    head = head->next;
+  }
+  cout << endl;
 }

@@ -3,53 +3,44 @@
 using namespace std;
 
 class Solution {
-public:
+ public:
   string longestPalindrome(string s) {
     string t = "#";
-    for (char i : s) {
-      t += i;
-      t += '#';
+    for (auto c: s) {
+      t += c;
+      t += "#";
     }
-
-    int start = 0, end = -1;
-
-    vector<int> v;
-    int right = -1, index = -1;
-    for (int i = 0; i < t.size(); ++i) {
-      int len;
-      if (i >= right) {
-        len = expand(t, i, i);
+    int n = t.size();
+    int start = 0, len = 0;
+    vector<int> lens(n);
+    int mid = 0, right = -1;
+    for (int i = 0; i < n; ++i) {
+      int cur_len;
+      if (right > i) {
+        int mirror = mid * 2 - i;
+        int skip = min(lens[mirror], right - i);
+        cur_len = expand(t, i - skip, i + skip);
       } else {
-        int skip = std::min(v[index * 2 - i], right - i);
-        len = expand(t, i - skip - 1, i + skip + 1);
+        cur_len = expand(t, i, i);
       }
-
-      if (i + len > right) {
-        right = i + len;
-        index = i;
+      lens[i] = cur_len;
+      if (i + cur_len > right) {
+        mid = i;
+        right = i + cur_len;
       }
-      v.push_back(len);
-
-      if (len * 2 + 1 > end - start + 1) {
-        start = i - len;
-        end = i + len;
+      if (cur_len > len) {
+        start = (i - cur_len + 1) / 2;
+        len = cur_len;
       }
     }
-    string rst;
-    for (int i = start; i <= end; ++i) {
-      if (t[i] != '#')
-        rst += t[i];
-    }
-    return rst;
+    return s.substr(start, len);
   }
-
-  // 返回臂长
-  static int expand(const string& s, int l, int r) {
-    while (l >= 0 && r < s.size() && s[l] == s[r]) {
-      l -= 1;
-      r += 1;
+  int expand(string& s, int left, int right) {
+    while (left >= 0 && right < s.size() && s[left] == s[right]) {
+      left -= 1;
+      right += 1;
     }
-    return (r - l - 2) / 2;
+    return (right - left - 2) / 2;
   }
 };
 

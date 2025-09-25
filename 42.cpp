@@ -4,49 +4,30 @@ using namespace std;
 
 class Solution {
  public:
-  int trap(vector<int> &height) {
-    if (height.size() <= 2) {
-      return 0;
-    }
-
+  int trap(vector<int>& height) {
     int n = height.size();
-    vector<int> l(n, -1);
-    vector<int> r(n, n);
-    for (int i = 0; i < n; ++i) {
-      int index = i - 1;
-      while (index >= 0 && height[index] <= height[i]) {
-        index = l[index];
+    int res = 0;
+    vector<int> s;
+    for (int i = 0; i < height.size(); ++i) {
+      while (!s.empty() && height[i] > height[s.back()]) {
+        int top = s.back();
+        s.pop_back();
+        int top_left;
+        if (s.empty()) {
+          break;
+        }
+        top_left = s.back();
+        res += (i - top_left - 1) * (min(height[i], height[top_left]) - height[top]);
       }
-      if (index >= 0 && l[index] != -1) {
-        l[i] = l[index];
-      } else {
-        l[i] = index;
-      }
+      s.push_back(i);
     }
-    for (int i = n - 1; i >= 0; --i) {
-      int index = i + 1;
-      while (index < n && height[index] <= height[i]) {
-        index = r[index];
-      }
-      if (index < n && r[index] != n) {
-        r[i] = r[index];
-      } else {
-        r[i] = index;
-      }
-    }
-    int sum = 0;
-    for (auto i = 0; i < n; ++i) {
-      if (l[i] < 0 || r[i] >= n) continue;
-      int h = std::min(height[l[i]], height[r[i]]);
-      sum += h - height[i];
-    }
-    return sum;
+    return res;
   }
 };
 
 int main() {
   Solution s;
-  vector<int> intervals = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+  vector<int> intervals = {4,2,0,3,2,5};
   cout << s.trap(intervals) << endl;
   return 0;
 }
